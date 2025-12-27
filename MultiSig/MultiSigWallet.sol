@@ -6,8 +6,8 @@ pragma solidity ^0.8.18;
 * 2. Transcation are independent and each user could make how much he want of txs, not only one per execution
 *
 * 3. Dynamlic way to use the contructor the enter whatever you want, "The constructor is the same as normal function, we could check also there"
-*
-*
+* Social expectation (off-chain) => “You proposed it, you execute it”
+* Protocol rule (on-chain) => “Anyone may execute it”. Like in DAO Once approvals reach threshold, The transaction belongs to the group, Not the individual who proposed it
  */
 
 contract MultiSigWallet {
