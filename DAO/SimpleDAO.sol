@@ -104,7 +104,7 @@ contract SimpleDAO {
 
         uint256 id = proposalCount++;
 
-        Proposal storage p = proposals[id];
+        Proposal storage p = proposals[id]; // This is just a pointer to a storage place wher "proposals[id]" resides
 
         p.target = target;
         p.value = value;
@@ -221,3 +221,19 @@ contract SimpleDAO {
 
     receive() external payable {}
 }
+
+
+/* 
+Things to expose to users:
+    -> Voting duration
+    -> Quorum percentage
+    -> Proposal threshold
+    -> Execution delay
+
+Events to add:
+ProposalCreated
+    -> VoteCast
+    -> ProposalSucceeded
+    -> ProposalExecuted
+    -> ProposalDefeated
+ */
