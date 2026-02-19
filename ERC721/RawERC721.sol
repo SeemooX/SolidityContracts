@@ -54,7 +54,7 @@ contract RawERC721 {
     mapping(uint256 => address) userOwnership;
     mapping(address => uint256) userBalance;
     mapping(uint256 => address) tokenApprovals;
-    mapping(address => mapping(address => bool)) operatorApprovals;
+    mapping(address => mapping(address => bool)) operatorApprovals; // This will make an address have controle over another addresses all NFTs related to this contract assetes
     /* mapping(address => Owns) userOwnership; */
 
     constructor(string memory collectionName, string memory collectionSymbol) {
