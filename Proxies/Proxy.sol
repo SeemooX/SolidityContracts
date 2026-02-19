@@ -11,7 +11,6 @@ contract Proxy {
 
     constructor(address _logic, address _value) {
     implementation = _logic;
-    owner = msg.sender;
 
     (bool ok, ) = _logic.delegatecall(
         abi.encodeWithSignature(
